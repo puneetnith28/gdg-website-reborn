@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Carousel from "../components/Carousel";
 // --- IMPORTS ---
 import SciFiCard from "../components/SciFiCard";
 import YearSelector from "./YearSelector";
@@ -11,7 +11,18 @@ import { events as eventsData } from "../data/events-data";
 export default function EventsPage() {
   const [years, setYears] = useState<string[]>([]);
   const [selectedYear, setSelectedYear] = useState("2026");
-
+  const photos = [
+  "https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1000",
+  "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000",
+  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000",
+  "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
+  "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=1000",
+  "https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=80&w=1000",
+  "https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1000",
+  "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000",
+  "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000",
+  "https://images.unsplash.com/photo-1614728263952-84ea256f9679?q=80&w=1000",
+];
   // Helper to assign neon colors
   const getThemeColor = (index: number) => {
     // Google Colors Palette
@@ -159,6 +170,13 @@ export default function EventsPage() {
             </div>
           </div>
         </div>
+      <div className="min-h-screen flex flex-col items-center justify-center p-10">
+        <h2 className="text-4xl text-white font-bold mb-10">Event Highlights</h2>
+        
+        {/* The Carousel */}
+        <Carousel images={photos} />
+        
+    </div>
       </main>
     </>
   );
