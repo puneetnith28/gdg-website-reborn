@@ -1,4 +1,4 @@
-import type { EventData } from "@/types/events";
+import type { EventData } from "../types/events";
 
 export const events: EventData[] = [
   // 2026 Events
