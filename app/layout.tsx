@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./components/theme-provider";
+import { Provider } from "./provider";
 import { FloatingDock } from "./components/floating-nav";
 import { 
   IconHome, 
@@ -72,14 +72,9 @@ export default function RootLayout({
               />
             </div>
           </div>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
+        <Provider>
           {children}
-        </ThemeProvider>
+        </Provider>
       </body>
     </html>
   );

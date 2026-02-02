@@ -5,11 +5,12 @@ interface INavLinks {
 
 const navlinks: INavLinks[] = [
   { text: "Home", to: "/" },
-  { text: "About Us", to: "/about" },
+  { text: "Achievements", to: "/achievements" },
   { text: "Events", to: "/events" },
   { text: "Team", to: "/team" },
   { text: "Projects", to: "/projects" },
-  // { text: "Membership", to: "/sign-up", type: "black" },
+  { text: "Blogs", to: "/blogs" },
+  { text: "Contact Us", to: "/contact" },
 ];
 
 export const LINKS_GROUP_ONE_COUNT = 5;
