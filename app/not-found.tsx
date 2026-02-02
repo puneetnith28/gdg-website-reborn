@@ -1,6 +1,6 @@
 "use client";
 import Footer from "./components/footer";
-import Navbar from "./components/navbar/navbar";
+import { Navbar } from "./components/navbar/navbar";
 import TextHighlighter from "./components/text-highlighter";
 import { Button } from "./components/ui/button";
 import { useRouter } from "next/navigation";
